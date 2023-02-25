@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import fetchPokemonData from '../components/fetchPokemonData';
+import Clear from '../components/clear';
 
 export default function RandomPokemon() {
   const [shownPokemonIds, setShownPokemonIds] = useState([])
@@ -16,6 +17,10 @@ export default function RandomPokemon() {
     setPokemonData(data)
     // setPokemonName(name)
   }
+    function Btn() {
+      handleClick()
+      Clear()
+    }
     // const [pokemonName, setPokemonName] = useState(null)
 
    const [pokemonData, setPokemonData] = useState(null);
@@ -23,9 +28,8 @@ export default function RandomPokemon() {
   if (!pokemonData) {
     return (
       <div>
-        <button onClick={handleClick}>ポケモンを表示</button>
-        <input type="text" name="name"/>
-        <p>k</p>
+        <button onClick={Btn}>ポケモンを表示</button>
+        <input type="text" id="input-field" name="name" />
       </div>
     );
   }
@@ -34,9 +38,8 @@ export default function RandomPokemon() {
     <div>
       <h1>{pokemonData.name}</h1>
       <img src={pokemonData.imag} alt={pokemonData.name} />
-      <button onClick={handleClick}>ポケモンを表示</button>
-      <input type="text" name="name"/>
+      <button onClick={Btn}>ポケモンを表示</button>
+      <input type="text" id="input-field" name="name" />
     </div>
   );
 }
-
