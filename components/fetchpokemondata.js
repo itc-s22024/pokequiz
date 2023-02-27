@@ -1,4 +1,4 @@
-import fetch from "isomorphic-fetch"
+// import fetch from "isomorphic-fetch"
 
 export default async function fetchPokemonData(id) {
     const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)
