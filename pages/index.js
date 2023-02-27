@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import fetchPokemonData from '../components/fetchPokemonData';
+import fetchPokemonData from '../components/fetchpokemondata';
 import Clear from '../components/clear';
 
 export default function RandomPokemon() {
